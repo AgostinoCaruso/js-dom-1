@@ -12,6 +12,9 @@ Facciamo accendi e spegni:
 const buttonLamp = document.getElementById("buttonLamp");
 buttonLamp.innerHTML = "ACCENDI";
 
+const myBody = document.querySelector("body");
+myBody.style.backgroundColor = "black";
+
 const lampWhite = document.getElementById("whiteLamp");
 const lampYellow = document.getElementById("yellowLamp");
 
@@ -21,4 +24,10 @@ lampWhite.style.transform = "rotateY(180deg)";
 buttonLamp.addEventListener("click", function(){
     lampWhite.classList.toggle("d-none");
     lampYellow.classList.toggle("d-none");
+    if(lampWhite.classList.contains("d-none")){
+        myBody.style.backgroundColor = "yellow";
+    }else{
+        myBody.style.backgroundColor = "black";
+
+    }
 })
