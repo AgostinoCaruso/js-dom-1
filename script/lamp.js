@@ -20,18 +20,23 @@ const myBody = document.querySelector("body");
 const lampWhite = document.getElementById("whiteLamp");
 const lampYellow = document.getElementById("yellowLamp");
 
-lampWhite.style.transform = "rotateY(180deg)";
-
+lampWhite.style.transform = "rotate(180deg)";
+lampYellow.style.transform = "rotate(180deg)";
 
 buttonLamp.addEventListener("click", function(){
+
     lampWhite.classList.toggle("d-none");
     lampYellow.classList.toggle("d-none");
+
     if(lampWhite.classList.contains("d-none")){
+
         myBody.classList.toggle("accesoBody");
-        buttonLamp.innerHTML = "spengimi";
+        buttonLamp.innerHTML = "spengi";
+        buttonLamp.classList.toggle("buttonLampOn");
     }else{
-        //myBody.style.backgroundColor = "black";
+        
         myBody.classList.toggle("accesoBody");
         buttonLamp.innerHTML = "accendi";
+        buttonLamp.classList.toggle("buttonLampOn");
     }
 })
