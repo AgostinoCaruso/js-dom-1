@@ -8,3 +8,15 @@ Facciamo accendi e spegni:
 - Al secondo click la lampadina si spegne e nel bottone compare la scritta "Accendi"
 - E così via...
 */
+
+const buttonLamp = document.getElementById("buttonLamp");
+buttonLamp.innerHTML = "ACCENDI";
+
+const lampWhite = document.getElementById("whiteLamp");
+const lampYellow = document.getElementById("yellowLamp");
+
+
+buttonLamp.addEventListener("click", function(){
+    lampWhite.classList.add("d-none");
+    lampYellow.classList.remove("d-none");
+})
