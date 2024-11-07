@@ -15,8 +15,10 @@ buttonLamp.innerHTML = "ACCENDI";
 const lampWhite = document.getElementById("whiteLamp");
 const lampYellow = document.getElementById("yellowLamp");
 
+lampWhite.style.transform = "rotateY(180deg)";
+
 
 buttonLamp.addEventListener("click", function(){
-    lampWhite.classList.add("d-none");
-    lampYellow.classList.remove("d-none");
+    lampWhite.classList.toggle("d-none");
+    lampYellow.classList.toggle("d-none");
 })
