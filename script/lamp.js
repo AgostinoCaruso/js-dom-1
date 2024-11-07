@@ -1,3 +1,6 @@
+"use strict";
+console.clear();
+
 /*
 *Consegna*
 Inseriamo in pagina l’immagine della lampadina spenta che trovate in allegato e accanto un bottone con la scritta “Accendi”.
@@ -10,10 +13,9 @@ Facciamo accendi e spegni:
 */
 
 const buttonLamp = document.getElementById("buttonLamp");
-buttonLamp.innerHTML = "ACCENDI";
+buttonLamp.textContent
 
 const myBody = document.querySelector("body");
-myBody.style.backgroundColor = "black";
 
 const lampWhite = document.getElementById("whiteLamp");
 const lampYellow = document.getElementById("yellowLamp");
@@ -25,9 +27,11 @@ buttonLamp.addEventListener("click", function(){
     lampWhite.classList.toggle("d-none");
     lampYellow.classList.toggle("d-none");
     if(lampWhite.classList.contains("d-none")){
-        myBody.style.backgroundColor = "yellow";
+        myBody.classList.toggle("accesoBody");
+        buttonLamp.innerHTML = "spengimi";
     }else{
-        myBody.style.backgroundColor = "black";
-
+        //myBody.style.backgroundColor = "black";
+        myBody.classList.toggle("accesoBody");
+        buttonLamp.innerHTML = "accendi";
     }
 })
